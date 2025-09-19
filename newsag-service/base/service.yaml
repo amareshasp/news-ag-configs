@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: newsag-backend
+  namespace: newsag
+spec:
+  selector:
+    app: newsag-backend
+  ports:
+    - port: 80
+      targetPort: 8080
+  type: ClusterIP

@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: newsag-backend
+  namespace: newsag
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: newsag-backend
+  template:
+    metadata:
+      labels:
+        app: newsag-backend
+    spec:
+      containers:
+        - name: newsag-backend
+          image: ghcr.io/amareshasp/newsag-service:latest
+          ports:
+            - containerPort: 8080
+          envFrom:
+            - configMapRef:
+                name: newsag-config
+          resources:
+            requests:
+              cpu: "200m"
+              memory: "256Mi"
+            limits:
+              cpu: "500m"
+              memory: "512Mi"

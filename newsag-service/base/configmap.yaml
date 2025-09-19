@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: newsag-config
+  namespace: newsag
+data:
+  FEED_URL: "https://timesofindia.indiatimes.com/rssfeedstopstories.cms"
+  APP_MODE: "prod"
