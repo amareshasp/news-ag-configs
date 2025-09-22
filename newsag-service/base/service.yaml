@@ -2,10 +2,13 @@ apiVersion: v1
 kind: Service
 metadata:
   name: newsag-service
+  namespace: newsag
 spec:
-  selector:
-    app: newsag
-  ports:
-    - port: 80
-      targetPort: 8080
   type: NodePort
+  selector:
+    app: newsag-backend      # must match Deployment’s pod template labels
+  ports:
+    - name: http
+      port: 80
+      targetPort: 8080
+      nodePort: 30755
