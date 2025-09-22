@@ -8,6 +8,6 @@ spec:
   selector:
     app: newsag-backend
   ports:
-    - port: 8080
+    - port: 80
       targetPort: 8080
       nodePort: 30080     # choose a port in 30000–32767
