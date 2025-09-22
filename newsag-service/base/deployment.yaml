@@ -17,7 +17,7 @@ spec:
         - name: ghcr-secret
       containers:
         - name: newsag-backend
-          image: ghcr.io/amareshasp/newsag-service:latest
+          image: ghcr.io/amareshasp/news_ag_service:latest
           ports:
             - containerPort: 8080
           envFrom:
