@@ -13,6 +13,8 @@ spec:
       labels:
         app: newsag-backend
     spec:
+      imagePullSecrets:
+        - name: ghcr-secret
       containers:
         - name: newsag-backend
           image: ghcr.io/amareshasp/newsag-service:latest
