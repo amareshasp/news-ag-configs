@@ -10,4 +10,4 @@ spec:
   ports:
     - port: 80
       targetPort: 8080
-      nodePort: 30080     # choose a port in 30000–32767
+      nodePort: 30080
